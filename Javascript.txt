@@ -1,0 +1,376 @@
+JavaScript 
+	programming language of the Web.
+	<script>
+	Scripts can be placed in the <body>, or in the <head> section
+	Placing scripts at the bottom of the <body> element improves the display speed, because script interpretation slows down the display.
+	<script src="myScript.js"></script>		// For external 
+	          
+JavaScript Output
+	To display 	
+		innerHTML, document.write(), window.alert(), console.log()
+	
+	document.getElementById(id)	// To access HTML elements
+	
+	innerHTML property defines the HTML content
+	document.getElementById("id").innerHTML = "Hello World!";
+	
+	document.write('Happy World')	// Delete all existing HTML: || should only be used for testing.
+
+	window.alert()			// Alert box to display data
+
+	console.log()			// For debugging purposes || in the browser to display data.
+	
+	window.print()			// To print current page
+	
+JavaScript Statements
+	Values, Operators, Expressions, Keywords, and Comments.
+
+JavaScript Keywords
+ Keyword Description
+	var		Declares a variable			// $ is also a variable
+	let		Declares a block variable
+	const		Declares a block constant
+	if		Marks a block of statements to be executed on a condition
+	switch		Marks a block of statements to be executed in different cases
+	for		Marks a block of statements to be executed in a loop
+	function	Declares a function
+	return		Exits a function
+	try		Implements error handling to a block of statements
+
+
+// or between /* and */ is treated as a comment.
+
+
+JavaScript syntax defines two types of values:
+	Fixed values   (Literals)	=> Numbers, strings
+	Variable values(variables)	=> var, let, const
+
+// If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated	let x = "5" + 4 + 5 => o/p = 545
+// let cannot be redeclare.
+// Variables declared inside a { } block cannot be accessed from outside the block:	// let have block scope while var doesn't 
+
+
+Constant Objects and Arrays
+	// It does not define a constant value. It defines a constant reference to a value.
+	// Because of this you can NOT:	|| Reassign a constant value || Reassign a constant array || Reassign a constant object
+	// But you CAN:			|| Change the elements of constant array || Change the properties of constant object
+	// Block scoped i.e. behave as let
+
+Operators 
+	+(used for numbers and to concatenate strings)  - * / % **(Exponentiation or Math.pow(x, 2) ) = == ++ -- || && !
+ 
+	typeof			// Returns the type of a variable
+	instanceof		// Returns true if an object is an instance of an object type
+
+JavaScript Data Types
+	let length = 16;                               	 // Number
+	let lastName = "Johnson";                     	 // String
+	let x = {firstName:"John", lastName:"Doe"}; 	 // Object
+	const cars = ["Saab", "Volvo", "BMW"];		 // Arrays
+	
+JavaScript Functions
+	// block of code designed to perform a particular task.
+	// during execution javascripts functions are called first. || declaring would follow the another paths. 
+
+	function myFunction(p1, p2) {
+  		return p1 * p2;   // The function returns the product of p1 and p2	}
+	function name(parameter1, parameter2, parameter3)
+	// parameter1 also can be accessed by arguments[0]
+	const fun = ()=>{ return 2* 4; }
+	
+
+JavaScript Objects
+	const car = {type:"Fiat", model:"500", color:"white", 10:"akf"}
+	// key is always a string  car["10"] 
+	// To access it 	|| objectName.propertyName		|| car.type 	or 	objectName["propertyName"]		|| car["type"]
+
+this Keyword	//  this refers to the "owner" of the function.	|| Refers to an object
+
+
+JavaScript Events
+	something the browser does, or something a user does
+	<element event='some JavaScript'>
+	<button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>	// Add section to demonstrate time 
+	<button onclick="this.innerHTML = Date()">The time is?</button>					// change the content of its own element
+
+
+	Events			Description
+	onchange	An HTML element has been changed
+	onclick		The user clicks an HTML element
+	onmouseover	The user moves the mouse over an HTML element
+	onmouseout	The user moves the mouse away from an HTML element
+	onkeydown	The user pushes a keyboard key
+	onload		The browser has finished loading the page
+	addEventListener	attaches an event handler to the specified element.
+
+
+	Event handlers can be used to handle and verify user input, user actions, and browser actions:
+		Things that should be done every time a page loads
+		Things that should be done when the page is closed
+		Action that should be performed when a user clicks a button
+		Content that should be verified when a user inputs data
+
+JavaScript Strings
+	let length = text.length;
+	let y = new String("John");	// To define the object
+	slice(start, end)			//  extracts a part of a string 		let part = str.slice(-12, -6);
+	substring(start, end)		// substring() cannot accept negative indexes.	str.substring(7, 13);
+	substr(start, length)
+	let newText = text.replace("Microsoft", "W3Schools");
+	let text2 = text1.toUpperCase();
+	let text2 = text1.toLowerCase();
+	let text3 = text1.concat(" ", text2);	joins two or more strings:
+	let text2 = text1.trim();	 removes whitespace from both sides of a string:
+	let padded = text.padStart(4,0);	//  padStart and padEnd to support padding at the beginning and at the end of a string.
+
+	let char = text.charAt(0);	// returns the character at a specified index (position) in a string:
+	let char = text[0];		// allows property access [ ] on strings:
+	text.split(",")    // Split on commas	// A string can be converted to an array with the split() method:
+
+	str.indexOf("locate");	//returns the index of (the position of) the first occurrence of a specified text
+	str.lastIndexOf("locate");	//returns the index of the last occurrence of a specified text	//  return -1 if the text is not found:
+	str.search("locate");	//returns the position of the match:
+
+	let text = "The rain in SPAIN stays mainly in the plain";
+	text.match(/ain/g);	//The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+	o/p => {ain, ain, ain}
+
+	string.includes(searchvalue, start)	//returns true if a string contains a specified value.		//text.includes("world", 12);
+
+	string.startsWith(searchvalue, start)	//text.startsWith("Hello");
+		//returns true if a string begins with a specified value, otherwise false
+	
+	string.endswith(searchvalue, length)	//returns true if a string ends with a specified value, otherwise false:
+		//text.endsWith("Doe");
+
+
+ Template Literals
+	Template Literals use back-ticks (``) rather than the quotes ("") to define a string:
+	Interpolations ${...}		//  `Welcome ${firstName}, ${lastName}!`;		// easy way to interpolate variables and expressions into strings.
+	
+
+
+
+JavaScript Numbers
+	let x = 3.14; 	let y = 3; 
+	Always 64-bit Floating Point	// Integer are accurate upto 15 digits . 
+	// let x = 10; 	let y = 23; 	let z = "23"	x + y + z = o/p => 3323
+	// let x = "10";		let y = 20;	let z = x + y;	o/p => 1020
+	// let x = "100";		let y = "10";	let z = x / y;	o/p => 10
+	// let x = "100";		let y = "10";	let z = x * y;	o/p => 1000
+	// let x = "100";		let y = "10";	let z = x - y;	o/p => 90
+
+	NaN - Not a Number		//  indicating that a number is not a legal number.
+	Infinity			// number outside the largest possible number.
+
+	toString() 			// returns a number as a string.	|| x.toString();					
+	toExponential() 		// returns a string, with a number rounded and written using exponential notation.	|| x.toExponential(4);
+	toFixed() 			// returns a string, with the number written with a specified number of decimals:
+	toPrecision() 			// returns a string, with a number written with a specified length
+	valueOf() 			// returns a number as a number.
+	Number() 			// used to convert JavaScript variables to numbers: || Number(new Date("1970-01-02"))
+	parseInt() 			// parses a string and returns a whole number. Only the first number is returned:
+	parseFloat()			// parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+
+	MAX_VALUE			// Returns the largest number possible in JavaScript
+	MIN_VALUE			// Returns the smallest number possible in JavaScript	||  Number.MAX_VALUE;
+	POSITIVE_INFINITY		// Represents infinity (returned on overflow)
+	NEGATIVE_INFINITY		// Represents negative infinity (returned on overflow)
+
+JavaScript Arrays
+	const array_name = [item1, item2, ...]; 
+	const cars = new Array("Saab", "Volvo", "BMW"); built in array constructor new Array().
+	document.getElementById("demo").innerHTML = cars;			// To access the list 
+	const person = {firstName:"John", lastName:"Doe", age:46};		// To access ::person.firstName
+	methods 	|| cars.length	|| cars.sort()
+
+	fruits.forEach(myFunction);
+	fruits.push("Lemon");  			// Adds a new element (Lemon) to fruits
+	fruits[fruits.length] = "Lemon";  	// Adds "Lemon" to fruits
+	fruits.toString();			// converts an array to a string 
+	fruits.join(" * ");			// joins all array elements into a string.
+	fruits.pop();				// removes the last element from an array:
+	fruits.push("Kiwi");			// adds a new element to an array (at the end):
+	fruits.shift();				// removes the first array element and "shifts" all other elements to a lower index.
+	fruits.unshift("Lemon");		// adds a new element to an array (at the beginning)
+	delete fruits[0];			// To delete the elements
+	myGirls.concat(myBoys);			// creates a new array by merging (concatenating) existing arrays:	//  arr1.concat(arr2, arr3);
+	fruits.splice(2, 0, "Lemon", "Kiwi");	// 2:: posn of inserting 0:: No. of items removed
+	fruits.splice(0, 1);			// remove elements without leaving "holes" in the array:
+	fruits.sort();				// To sort the array
+	fruits.reverse();			// To reverse the array 
+	point.sort(function(a, b) {return a - b}); // To sort the numbericas 
+	Math.max.apply(null, arr)		// Maximum value in array arr
+	Math.min.apply(null, arr)		// Minimum value in array arr
+
+Iterations ::=> 
+	arr = [ 23, 34, 2, 234,4 324, 234]
+	for (let i = 0; i < arr.length; i++)
+	
+	forEach() method calls a function (a callback function) once for each array element.	// takes 3 argum  || 1. value 2. index 3. array 
+	arr.forEach(function(val, idx){console.log(idx, val)}) ; 
+
+JavaScript Array map()
+	// creates a new array by performing a function on each array element
+	// oes not change the original array.	// similar to function 
+
+Date Objects
+	// const d = new Date();	|| Sat Jan 29 2022 10:24:41 GMT+0530 (India Standard Time)
+	// new Date(year, month, day, hours, minutes, seconds, milliseconds)
+	// new Date(milliseconds)
+	// new Date(date string)	|| const d = new Date("October 13, 2014 11:13:00");
+
+	Displaying Dates
+		// d.toString();	|| By default 
+		// d.toUTCString();	|| Sat, 29 Jan 2022 05:06:14 GMT
+		// d.toDateString();// Sat Jan 29 2022
+		// d.toISOString();	|| 2022-01-29T05:06:44.788Z
+
+	Get Date Methods
+		  Method			Description
+		getFullYear()		Get the year as a four digit number (yyyy)
+		getMonth()		Get the month as a number (0-11)
+		getDate()		Get the day as a number (1-31)
+		getHours()		Get the hour (0-23)
+		getMinutes()		Get the minute (0-59)
+		getSeconds()		Get the second (0-59)
+		getMilliseconds()	Get the millisecond (0-999)
+		getTime()		Get the time (milliseconds since January 1, 1970)
+		getDay()		Get the weekday as a number (0-6)
+		Date.now()		Get the time. ECMAScript 5.
+
+	Set Date Methods
+		// you set date values (years, months, days, hours, minutes, seconds, milliseconds) for a Date Object.
+		  Method			  Description
+		setDate()		Set the day as a number (1-31)
+		setFullYear()		Set the year (optionally month and day)
+		setHours()		Set the hour (0-23)
+		setMilliseconds()	Set the milliseconds (0-999)
+		setMinutes()		Set the minutes (0-59)
+		setMonth()		Set the month (0-11)
+		setSeconds()		Set the seconds (0-59)
+		setTime()		Set the time (milliseconds since January 1, 1970)
+		
+Math Object
+	// allows you to perform mathematical tasks on numbers.
+	Math.E        	// returns Euler's number
+	Math.PI       	// returns PI
+	Math.SQRT2    	// returns the square root of 2
+	Math.SQRT1_2  	// returns the square root of 1/2
+	Math.LN2      	// returns the natural logarithm of 2
+	Math.LN10     	// returns the natural logarithm of 10
+	Math.LOG2E    	// returns base 2 logarithm of E
+	Math.LOG10E   	// returns base 10 logarithm of E
+	Math.round(x)	// Returns x rounded to its nearest integer
+	Math.ceil(x)	// Returns x rounded up to its nearest integer
+	Math.floor(x)	// Returns x rounded down to its nearest integer
+	Math.trunc(x)	// Returns the integer part of x (new in ES6)
+	Math.sign(x) 	// Returns if x is negative, null or positive:	// 0/p => 0 / 1
+	Math.pow(x, y) 	// returns the value of x to the power of y:
+	Math.sqrt(x) 	// returns the square root of x:
+	Math.abs(x) 	// returns the absolute (positive) value of x:
+	Math.sin(90 * Math.PI / 180);	// returns the sine (a value between -1 and 1) of the angle x (given in radians).
+	Math.min() and Math.max() //  find the lowest or highest value in a list of arguments:
+	Math.random() 	// returns a random number between 0 (inclusive), and 1 (exclusive):	// Math.floor(Math.random() * (max - min + 1) ) + min;
+	Math.log(x) 	// returns the natural logarithm of x.
+	Math.log2(x) 	// returns the base 2 logarithm of  x
+
+JavaScript Booleans
+	//  represents one of two values: true or false.	// == > <
+JavaScript For In
+	for (key in object)
+	Array.forEach()
+
+
+
+JavaScript HTML DOM(Document Object Model)
+	standard for how to get, change, add, or delete HTML elements.
+	DOM methods are actions you can perform
+	DOM properties are values (of HTML Elements) that you can set or change.
+	
+	Accessings:-> 
+		document 					// Access entire page
+		document.body					// Access entire body
+		document.getElementsByTagName('p')		// Access all paras
+		document.getElementsByClassName('para')		// All classes named para
+		let x=document.getElementById('p1')		// all ids of p1
+		x.innerText	x.innerHTML	x.outerText	x.outerHTML
+		x.getAttribute('class')	x.getAttribute('id')
+		
+		x.setAttribute('contenteditable', true)		// Edit the data in page
+		x.setAttribute('spellcheck', false)		// In editable data, removing spell check won't add line for errors
+		x = document.getElementById('Haha')
+		// x.previousElementSibling	// x.previousSibling	// x.nextElementSibling	// x.parentElement	// x.parentElement.parentElement	
+		// x.parentElement.children[0]		// works like a tree 
+		
+	Create Element:=>
+		let item = document.createElement('li')
+		item.innerText = i; 
+		list.appendChild(item)
+
+		// for any input type 	// let 'inbox' is id for the input box
+		i = document.getElementById('inbox')
+		i.value				// value by user
+		i.value  = 'setting'		// by default
+		i.setAttribute('type','email')	// This box only contain email address
+		i.validity			// To check every data is valid or not
+
+		x.parentElement
+		x.parentElement.previousSibling
+		x.parentElement.previousElementSibling.children
+
+	A property is a value that you can get or set (like changing the content of an HTML element).
+	A method is an action you can do (like add or delete an HTML element).
+
+
+	// document.getElementById("demo").innerHTML = "Hello World!";
+	// getElementById is a method, while innerHTML is a property.
+	// getElementById method used id="demo" to find the element.
+	// innerHTML property is useful for getting or replacing the content of HTML elements.
+
+
+Finding HTML Elements
+	Method						Description
+	document.getElementById(id)		Find an element by element id
+	document.getElementsByTagName(name)	Find elements by tag name
+	document.getElementsByClassName(name)	Find elements by class name
+
+
+Changing HTML Elements
+	Property					Description
+	element.innerHTML = new html content    Change the inner HTML of an element
+	element.attribute = new value	 	Change the attribute value of an HTML element
+	element.style.property = new style	Change the style of an HTML element
+
+Adding and Deleting Elements
+	Method					Description
+	document.createElement(element)	    Create an HTML element
+	document.removeChild(element)	    Remove an HTML element
+	document.appendChild(element)	    Add an HTML element
+	document.replaceChild(new, old)	    Replace an HTML element
+	document.write(text)	            Write into the HTML output stream
+
+
+Adding Events Handlers
+	Method						Description
+	document.getElementById(id).onclick = function(){code}	Adding event handler code to an onclick event
+
+
+Finding HTML Elements
+	by id, tag name, class name, css selector, Object collection
+	// document.getElementById("intro");
+	// document.getElementsByTagName("p");
+	// getElementsByClassName("intro");
+	// document.querySelectorAll("p.intro");
+
+Changing HTML Content
+	// document.getElementById(id).innerHTML = new HTML
+	// document.getElementById(id).attribute = new value
+
+Changing HTML Style
+	// document.getElementById(id).style.property = new style
+
+Html Navigations: 
+	//parentNode //childNodes[nodenumber] // firstChild //lastChild //nextSibling //previousSibling
+	document.body - The body of the document
+	document.documentElement - The full document

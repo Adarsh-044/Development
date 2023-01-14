@@ -1,0 +1,408 @@
+Cascading Style Sheets
+	CSS is used to define styles for your web pages, including the design,layout and variations in display for different devices and screen sizes.
+
+CSS Syntax
+	Selector	Declaration	
+	p	{ color : blue; font-size: 12px;  }
+
+selector
+	selects the HTML element(s) you want to style.
+	id Selector				#id_name{}
+	class Selector			.class_name{}		element.class{}
+	universal selector 		(*) 	*{}
+	Groping Selectors 		h1,p2, p3{}
+
+
+Add CSS
+	External CSS	<link rel="stylesheet" href="mystyle.css">
+	Internal CSS	inside the head section.
+	Inline CSS	 	for a single element.
+
+	priority : => 	Inline > External > Browser 
+	
+Comments 
+	/* This is a single/Multiple-line comment */
+	 <!--..This is also a comment.-->
+
+CSS Colors
+	predefined color names:-  	RGB, HEX, HSL, RGBA, HSLA values.
+	Color Names:: 				https://www.w3schools.com/colors/colors_names.asp
+	
+	background-color:DodgerBlue;		// Background Color
+	color:DodgerBlue;					// Text Color
+	border:2px solid Tomato;			// Border
+	
+	rgb(red, green, blue)		
+	rgba(red, green, blue, alpha)	 	0.0 <alpha < 1	https://www.w3schools.com/css/css_colors_rgb.asp
+	#rrggbb								// HEX Value
+	hsl(hue, saturation, lightness)		0 < hue < 360   0 < sat,lig < 100% 	0 is red, 120 is green, and 240 is blue. 100% is pure color,
+	hsla(hue, saturation, lightness, alpha)
+	opacity property sets the opacity for the whole element 	// 0.0 (fully transparent) and 1.0 (fully opaque).
+	
+
+CSS Backgrounds
+	background-color		//background color of an element.	// transparent 			//  currentcolor	
+	background-image		//specifies an image	  			// By default, the image is repeated so it covers the entire element.
+	background-repeat		//repeats an image both horizontally and vertically.		// repeat-x;, repeat-y;. no-repeat		
+	background-attachment	// background image should scroll or be fixed				// fixed, scroll
+	background-position		// right top; , bottom left; 
+	background 				// color image repeat right top; 		// background: #ffffff url("img_tree.png") no-repeat right top;
+
+Opacity 					// specifies the opacity/transparency of an element 			// 0.0 - 1.0.
+
+CSS Borders
+	specify the style, width, and color of an element's border.
+	
+	border-style	// specifies what kind of border to display.
+		dotted - 	// dotted border
+		dashed -	// dashed border
+		solid -   	// a solid border
+		double -	// a double border
+		groove -	// 3D grooved border. The effect depends on the border-color value
+		ridge -	 	// a 3D ridged border. The effect depends on the border-color value
+		inset -	 	//  3D inset border. The effect depends on the border-color value
+		outset -	// 3D outset border. The effect depends on the border-color value
+		none -		// no border
+		hidden - 	//  a hidden border
+	
+	border-width	// specifies the width of the four borders.	//specific size (in px, pt, cm, em, etc)  // thick; medium; 
+	border-color	// set the color of the four borders
+	border-radius	// add rounded borders to an element:
+	
+CSS Margins			// outside of any defined borders
+	margin-top
+	margin-right
+	margin-bottom
+	margin-left
+	margin: 25px 50px 75px 100px;	// Top bottom right left
+									// auto : horizontally center 	// inherit;  // Same margin as parent
+
+CSS Padding			// inside of any defined borders.
+	padding-top, padding-right, padding-bottom, padding-left
+	
+box-sizing: border-box;	// The box-sizing property allows us to include the padding and border in an element's total width and height
+
+CSS Height and Width
+	height, width 	// auto; length(px); %; intial; inherit;
+	max-width		// used in responsive sites 
+
+CSS Box Model
+	Content => Padding => Border => Margin 
+
+ 	Content - The content of the box, where text and images appear
+	Padding - Clears an area around the content. The padding is transparent
+	Border - A border that goes around the padding and content
+	Margin - Clears an area outside the border. The margin is transparent
+
+CSS Outline		// drawn outside the element's border.
+	outline-style
+	outline-color
+	outline-width
+	outline-offset	// adds space between an outline and the edge/border of an element. 
+	outline			// width style color { outline: 5px thick red;}
+	
+	
+CSS Text
+	color
+	background-color: 
+	text-align 		// set the horizontal alignment of a text.	// left; right; center; justify; 
+	text-align-last	// specifies how to align the last line of a text.
+	
+
+	direction  unicode-bidi	 //  used to change the text direction of an element:
+	direction: rtl;
+  	unicode-bidi: bidi-override;
+	
+	vertical-align	// vertical alignment of an element.				// baseline; text-top; text-bottom; sub; super; 
+
+	text-decoration // used to set or remove decorations from text		// none; overline; line-through; underline; 
+	
+	text-transform 	// To specify uppercase and lowercase letters in a text.		// uppercase; lowercase; capitalize; 
+
+	text-indent 	// to specify the indentation of the first line of a text:			// {text-indent: 50px; }
+	
+	letter-spacing 	// to specify the space between the characters in a text.	// {letter-spacing: -5px;}
+	
+	line-height property 	// specify the space between lines: 
+	word-spacing 			// is used to specify the space between the words in a text.
+	
+	white-space	//  specifies how white space inside an element is handled.
+
+	text-shadow 	// property adds shadow to text.
+			// {text-shadow: 2px 3px 5px red; }
+			// Horizontal vertical blur color;
+		  	// text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;		multiple section is possible 
+
+CSS Fonts		https://fonts.google.com/
+	font-family 	// font-family: Arial, Helvetica, sans-serif;
+	
+	Serif fonts	have a small stroke at the edges of each letter. They create a sense of formality and elegance.
+	Sans-serif fonts 	clean lines (no small strokes attached). They create a modern and minimalistic look.
+	Cursive fonts imitate human handwriting.
+	Fantasy fonts 	decorative/playful fonts.
+
+	Arial (Sans-Serif) 		// is the safest web font, and it is available on all major operating systems. google docs 
+	Verdana (sans-serif)	// easily readable
+	Times New Roman (serif)	// looks professional
+	Georgia (serif)			// mobile-responsive design.
+	
+
+	font-style		//  used to specify italic text. 	// normal; italic; oblique; 
+	font-weight: 	//  weight of a font:		// normal; bold; 
+	font-size		// size of the fonts 		// default 16px = 1em 	// vw = viewport width
+
+	Enabling Font Effects	
+		First add effect=effectname to the Google API, then add a special class name to the element that is going to use the special effect. The class name always starts with font-effect- and ends with the effectname.
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow|fire-multiple">
+		<h1 class="font-effect-fire">Sofia on Fire</h1>		
+
+	font -> font-style  font-variant   font-weight  font-size/line-height  font-family
+		// font: italic small-caps bold 12px/30px Georgia, serif;
+	
+CSS Links
+	a:link	{color:red;} 	- a normal, unvisited link
+	a:visited 	{color:green;}	- a link the user has visited
+	a:hover 	{color:hotpink;}	- a link when the user mouses over it
+	a:active 	{color:blue;}	- a link the moment it is clicked
+	
+	text-decoration	// To remove underline
+	
+CSS lists
+	list-style-type: circle; none; 	square; 	lower-alpha; upper-roman; 
+	list-style-position 		specifies the position of the list-item markers (bullet points).
+		outside; inside; 
+
+
+The display Property
+	display : block; inline; none;(hide/show) 
+	Block-level Elements	starts on a new line and takes up the full width available
+		<div>, <h1> - <h6>, <p>, <form>, <header>, <footer>, <section>
+	Inline Elements		does not start on a new line and only takes up as much width as necessary.
+		<span>  <a>  <img>
+	
+	visibility:hidden;	show; 
+
+
+The position Property
+	// specifies the type of positioning method used for an element.
+	position: static;	// By default 	// Not affected by top, bottom, right, left
+	position: relative; 	//  positioned relative to its normal position.	//Setting the top, right, bottom,left properties of a relatively-posn element 
+	position: fixed; 	// positioned relative to the viewport,	it always stays in the same place even if the page is scrolled. // Setting of pos
+	position: absolute; 	// positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed)
+	position: sticky;	// positioned based on the user's scroll position.	// t toggles between relative and fixed	// It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+	
+	
+The z-index Property
+	z-index property specifies the stack order of an element.
+	z-index only works on positioned elements (posn: absolute; relative, fixed: sticky) and flex items (elements that are direct children of flex elments
+	greater stack order is always above an element with a lower stack
+
+CSS Overflow	
+	specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area
+	overflow: scroll; visible; auto; hidden	overflow-x: hidden;		  overflow-y: scroll;
+	visible - Default. The overflow is not clipped. The content renders outside the element's box
+	hidden - The overflow is clipped, and the rest of the content will be invisible
+	scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+	auto - Similar to scroll, but it adds scrollbars only when necessary
+
+	The overflow property only works for a block element
+
+float Property
+	float property is used for positioning and formatting content 
+	left; right; inherit; none; 
+Clear Property
+	clear property specifies what should happen with the element that is next to a floating element.
+	left; right; inherit; none; both; 
+
+display: inline-block;
+	//  allows to set a width and height on the element
+	// does not add a line-break after the element,
+	// Using inline-block to Create Navigation Links
+
+CSS Combinator
+	explains the relationship between the selectors.
+		descendant selector (space)	//  selector matches all elements that are descendants	// div p {color : yellow}; 	
+					// element element	div p	Selects all <p> elements inside <div> elements
+		child selector (>)		// selects all elements that are the children of a specified element.	div > p {}; 
+					// element>element	div > p	Selects all <p> elements where the parent is a <div> element
+		adjacent sibling selector (+)	// used to select an element that is directly after another specific element.	div + p{}; 	
+					// element+element	div + p	Selects the first <p> element that are placed immediately after<div>elements
+		general sibling selector (~)	// selects all elements that are next siblings of a specified element.	div ~ p{}; 
+					// element1~element2	p ~ ul	Selects every <ul> element that are preceded by a <p> element
+
+
+Pseudo-classes
+	// Style an element when a user mouses over it	// Style visited and unvisited links differently	//Style an element when it gets focus
+	// selector:pseudo-class {	property: value;	}
+	// a: link {color: "red";}		// a.highlight:hover   {color: #ff0000;}		// div:hover{}	// p:first-child	// p i:first-child
+	// :active		// :checked	// :disabled	//:empty	//:enabled	//:first-child	//:first-of-type	//:focus	// :hover		// :in-range	// :invalid		//:last-child		// :link		// :not(selector)		// :nth-child(n)		// :nth-last-child(n) // :only-child	// :optional	// :root		// :required	// :target		// :valid	// :visited
+
+
+Pseudo-Elements
+	// used to style specified parts of an element.
+	// selector::pseudo-element {  property: value;}	
+	// p::first-line , p:: first-letter
+	// ::before pseudo-element can be used to insert some content before the content of an element.
+	// ::after pseudo-element can be used to insert some content after the content of an element.
+	// ::marker pseudo-element selects the markers of list items.
+	// :: selection 	// portion of an element that is selected by a user
+
+
+CSS Attribute Selectors
+	// a[target] { background-color: yellow; }	
+	
+	Selector		Example				Example description
+	[attribute]	[target]			Selects all elements with a target attribute
+	[attribute=value]	[target=_blank]		Selects all elements with target="_blank"
+	[attribute~=value]	[title~=flower]		Selects all elements with a title attribute containing the word "flower"
+	[attribute|=value]	[lang|=en]			Selects all elements with a lang attribute value starting with "en"
+	[attribute^=value]	a[href^="https"]		Selects every <a> element whose href attribute value begins with "https"
+	[attribute$=value]	a[href$=".pdf"]		Selects every <a> element whose href attribute value ends with ".pdf"
+	[attribute*=value]	a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
+
+
+CSS Rounded Corners
+	// border-radius	// defines the radius of an element's corners.
+	// border-top-left-radius, border-top-right-radius, border-bottom-right-radius and border-bottom-left-radius
+
+CSS Border Images
+	// border-image: url(border.png) ; 
+	// set an image to be used as the border around an element.
+	// border-image: url('  ') slice stretched/ repeated/ rounded	// border-image: url('photo.png') 45 stretched
+ 
+Figure Tags
+	// To mark up the photo in a documents.
+	// Self Contained Contents. 
+				<figure> <img src =""/> 
+					<figcation> Title of image </figcation>
+				</figure>
+
+CSS Multiple Backgrounds
+	// add multiple background images for an element, through the background-image property.
+	//  background-image: url(img_link.gif), url(paper.gif);
+	// background-size 	//  you to specify the size of background images.	// scale , percentage , cover , contain 
+	// background-origin property specifies where the background image is positioned.
+	.. background-origin: border-box  padding-box  content-box
+	// background: url(img_man.jpg) no-repeat center fixed;
+
+	// background-clip property specifies the painting area of the background. 
+	// background-clip: content-box , border-box, padding box
+
+CSS Gradients
+	// display smooth transitions between two or more specified colors.
+	// CSS Linear Gradients	// (goes down/up/left/right/diagonally)
+	// background-image: linear-gradient(direction/angle, color-stop1, color-stop2, ...);	// to right, to bottom right, 180deg
+
+	// Radial Gradients (defined by their center)
+	// background-image: radial-gradient(shape size at position, start-color, ..., last-color);	// ellipse , circle 
+
+
+	// Conic Gradients (rotated around a center point)
+	// background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+	//  background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+
+CSS Shadow Effects
+	// text-shadow 	//  applies shadow to text.
+	//  text-shadow: 2px 2px 5px red;	horizontal vertical blur color
+	
+	// box-shadow 	//  apply one or more shadows to an element
+	// box-shadow: 10px 10px 5px grey inset;	hori.verti. blur color inset(changes the shadow from an outer shadow (outset) to an inner shadow.)
+	
+CSS Text Effects
+	CSS Text Overflow	// specifies how overflowed content that is not displayed should be signaled to the user.
+			// white-space: nowrap;	// overflow: visible;
+
+	CSS Word Wrapping // word-wrap property allows long words to be able to be broken and wrap onto the next line.
+			//   word-wrap: break-word;	
+	
+	Word Breaking	// specifies line breaking rules.
+			// word-break: keep-all;; break-all; 	
+	
+	CSS Writing Mode	// whether lines of text are laid out horizontally or vertically.
+			// writing-mode: horizontal-tb;	//  vertical-rl;
+	
+CSS 2D Transforms	
+	// allow you to move, rotate, scale, and skew elements.
+	transform: translate(34px, 43px); 
+	
+	translate(x, y)	// moves an element from its current position
+	rotate(34deg)	// rotates an element clockwise or counter-clockwise
+	scale(2,3)		// increases or decreases the size of an element
+	scaleX(3) 		// increases or decreases the width of an element.	
+	scaleY(4) 		// increases or decreases the height of an element.
+	skewX(34deg)	// skews an element along the X-axis by the given angle.
+	skewY(4deg)	// skews an element along the Y-axis by the given angle.
+	 skew(23deg, 4deg) 	 // skews an element along the X and Y-axis by the given angles.
+	matrix() 		// combines all the 2D transform methods into one    // matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())
+
+
+CSS 3D Transforms
+	rotateX(34deg) 	// method rotates an element around its X-axis at a given degree:
+	rotateY() 		// rotates an element around its Y-axis at a given degree:
+	rotateZ() 		// method rotates an element around its Z-axis at a given degree:
+
+
+CSS Transitions
+	// allows you to change property values smoothly, over a given duration.
+	transition
+		// transition: width 2s linear 1s;
+	transition-duration: t sec; // how many seconds or milliseconds a transition effect takes to complete
+
+	transition-delay
+		// property specifies a delay (in seconds) for the transition effect.
+		// transition-delay: 1s;
+
+	transition-property: color: red; 
+	
+	transition-timing-function
+		// specifies the speed curve of the transition effect.
+		// ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+		// linear - specifies a transition effect with the same speed from start to end
+		// ease-in - specifies a transition effect with a slow start
+		// ease-out - specifies a transition effect with a slow end
+		// ease-in-out - specifies a transition effect with a slow start and end
+
+CSS Animations
+	//  allows animation of HTML elements without using JavaScript or Flash!
+	@keyframes
+	animation-name
+	animation-duration
+	animation-delay
+	animation-iteration-count
+	animation-direction	// normal; reverse; alternate; alternate-reverse; 
+	animation-timing-function
+	animation-fill-mode	// none; forwards; backwards; both; 
+	animation: animation_name durantion timig_func delay itern_cnt fill_mode
+
+
+CSS Variables:
+	// To declare Custom properties 
+	:root{
+		--main-color: black;}
+
+	// To access
+		color: var(--main-color); 
+
+CSS Calculations:
+	// To perform calculation using calc()
+	// width: calc(10px + 23px)	// height: calc(var(--h) * 4)
+
+object-fit::
+	// Specifies how an <img> or <video> should be resized to fit its container
+	// fill - This is default. The image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit
+	// contain - The image keeps its aspect ratio, but is resized to fit within the given dimension
+	// cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
+	// none - The image is not resized
+	// scale-down - the image is scaled down to the smallest version of none or contain
+
+box-sizing : border-box; 
+	// allows us to include the padding and border in an element's total width and height.
+
+Css FlexContainer
+	// display: flex; 
+	// flex-direction :: defines in which direction the container wants to stack the flex items.	// row; column; row-reverse; column-reverse; 
+	// flex-wrap :: specifies whether the flex items should wrap or not.	// wrap; no-wrap; 
+	// flex-flow	// flex-dirn flex-wrap
+	// justify-content ;; used to align the flex items: // center; flex-start; flex-end; space-around; space-between; 
+	// align-items	//  align the flex items.	
+	// align-content	

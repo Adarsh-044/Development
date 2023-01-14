@@ -1,0 +1,362 @@
+HTML stands for Hyper Text Markup Language
+
+......................................................................................
+<!DOCTYPE html>      // Document type, helps browser to display web pages.
+<html>    	   // Root element of html page
+<head> 	 	   // Meta Info 
+<title>Page Title</title>
+</head>
+<body>		   // Defines the document's body
+
+<h1>My First Heading</h1>    // Heading h1, h2, h3,h4, h5, h6
+<p>My first paragraph.</p>	  // paragraph p1, p2, p3, p4, p5, p6
+
+</body>
+</html>
+`````````````````````````````````````````````````````````````````````````
+
+<br> 		// line break,
+<hr> 		// displayed as a horizontal rule.
+
+ Attributes =>  additional information about HTML elements
+
+<a href="https://www.w3schools.com">This is a link</a>    // Links are defined. 
+ href <a> =>  specifies the URL of the page the link goes to 
+
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">    // Add an image
+ src <img> => specifies the path to the image to be displayed
+ alt <img> => provides an alternate text for an image
+
+<p style="color:red;">This is a red paragraph.</p>
+style =>  add styles to an element, such as color, font, size,
+
+<pre> Lorem34 </pre> 	// preformatted text
+<pre> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:
+
+Style Attributes					//styling HTML elements
+<tagname style="property:value;">		
+<body style="background-color:powderblue;">		//background color
+<h3 style = "color:blue;"> Lorem3 </h3> 		//text colors	
+<p style  = "font-family: courier;" > lorem10 </p>	//text fonts
+<p style  = "font-size: 344%;" > lorem10 </p>		//text sizes
+<p style  = "text-align:center;" > lorem10 </p>		//text alignment
+
+<b> - Bold text			//displayed in bold
+<strong> - Important text		
+<i> - Italic text			//displayed in italic, used to indicate a technical term
+<em> - Emphasized text	
+<mark> - Marked text		//marked or highlighted:
+<small> - Smaller text
+<del> - Deleted text		//strike a line through deleted text
+<ins> - Inserted text		//underline inserted text
+<sub> - Subscript text		//appears half a character below the normal line
+<sup> - Superscript text		//half a character above the normal line
+
+
+<abbr>	abbreviation or acronym when you mouse over the element. 
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<address>   Contact information for the author/owner of a document in italic
+<bdo>	    Text direction  <bdo dir="rtl"> Lorem12 </bdo> 
+<blockquote> A section that is quoted from another source
+<cite>	    Title of a work
+<q>	    Short inline quotation
+
+<!-- Write your comments here -->		// Comment
+
+
+Html Colors 
+	color names, RGB, HEX val(#rrggbb), hsl 
+	
+rgba(red,gre,blue,alpha) alpha=0-1(fully transp., no trans),Intensity 0-255
+hsl(hue, saturation, lightness) 0-360, 0- 100%, 0- 100%
+hsla(hue, saturation, lightness, alpha)
+
+HTML Links
+	 click on a link and jump to another document.
+	<a href="url">link text</a>
+	    An unvisited link is underlined and blue
+	    A visited link is underlined and purple
+	    An active link is underlined and red
+
+
+	An HTML link is displayed in a different color depending on whether it has been visited, is unvisited, or is active.
+	<style>
+	a: link{ color:green; }
+	a: visited{color:pink; }
+	a: hover{color: blue; }
+	a: active{color: grey; }
+	</style> 
+
+The target Attribute   specifies where to open the linked document
+	<a href ="www.google.com" target = "_blank"> Google </a> 
+	_self same window
+	_blank new window o
+	_parent in the parent frame
+	_top full body of the window
+
+	
+Absolute URLs vs. Relative URLs
+	absolute URL (a full web address)   	
+		<a href = "http://www.w3.org/"> W3 </a> 
+	
+	relative URL (without the "https://www" part):	
+		<a href = htmp_img.asp"> Html Image</a> 
+	
+Image as a link,
+	 just put the <img> tag inside the <a> tag
+	<a href = "default.asp"><img src = "smiley.gif" alt = "err"> </a> 
+
+Link to an Email Address
+	Use mailto: inside the href attribute to create a link that opens the user's email program 
+	<a href = "mailto: someone@example.com"> Send Email </a> 
+
+Button as a Link
+	<button onclick ="document.location='default.asp'">Html</button>  
+Link Titles
+	title attribute specifies extra information about an element.
+	shown as a tooltip text when the mouse moves over the element.
+	<a href="www.happyindia.com" title ="India Happiness>Visit</a>
+	
+Create Bookmarks
+	Direct jump to specific parts of a web page.
+	Use the id attribute (id="value") to define bookmarks in a page
+	Use the href attribute (href="#value") to link to the bookmark
+	
+	<a href="#C4">Jump to Chapter 4</a>
+	<h2 id="C4">Chapter 4</h2>
+	
+
+HTML Images
+	<img src="pic_trulli.jpg" alt="Italian Trulli">
+		<img> tag is used to embed an image in a web page
+		src - Specifies the path to the image
+		alt - Specifies an alternate text for the image
+	Images Format
+		APNG	Animated Portable Network Graphics	.apng
+		GIF	Graphics Interchange Format		.gif
+		ICO	Microsoft Icon			.ico, .cur
+		JPEG	Joint Photographic Expert Group image	.jpg, .jpeg, .jfif, .pjpeg, .pjp
+		PNG	Portable Network Graphics		.png
+		SVG	Scalable Vector Graphics		.svg
+
+	Image Maps <map> 
+	
+		Clicable Areas in image <area>
+	
+	<img src="workplace.jpg" usemap="#workmap">
+	
+	<map name = "workmap">
+		<area shape = "rect" coords="34,44,270,350" href ="computer.htm">
+		<area shape ="circle"  coords="290,172,33" href ="coffeee.htm">
+	
+	Shape
+		rect,circle, poly, default
+	coords =>  location of diagonal elements
+		rect = (x1, y1, x2, y2)
+		circle = (x, y, r)	
+		poly = (x1, y1, x2, y2, ...)
+		
+	The HTML <picture> element allows you to display different pictures for different devices or screen sizes.
+	<picture>
+  	<source media="(min-width: 650px)" srcset="img_food.jpg">
+  	<source media="(min-width: 465px)" srcset="img_car.jpg">
+ 	 <img src="img_girl.jpg">
+	</picture>
+
+
+HTML Favicon
+	A favicon is a small image displayed next to the page title in the browser tab.
+	add a <link> element to your "index.html" file, after the <title> element, like this:
+	<head>
+  	  <title>My Page Title</title>
+           	  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	</head>
+
+HTML Tables
+	arrange data into rows and columns
+	<tr> <th>  < td> 
+	td content of the table cell
+	tr table rows
+
+	<table>
+  	  <tr>
+    	     <th>Company</th>
+ 	  </tr>
+ 	  <tr>
+ 	      <td>Alfreds Futterkiste</td>
+ 	  </tr>
+	  <tr>
+	    <td>Mexico</td>
+  	  </tr>
+	</table>
+	
+	Properties: 
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: #96D4D4;.		border-color: #96D4D4;
+	border-radius: 10px;
+	border-style: dotted;	dotted     dashed     solid     double     groove     ridge     inset     outset     none     hidden
+	style="width:100%"	
+	text-align: left;
+	<colspan> 	number of columns to span.	 <th colspan="2">Name</th>		// Separate the next rows into 2 columns
+	<rowspan>	no. of rows to span.		 <th rowspan="2">Phone</th>		
+	<caption>	Monthly savings</caption>	// serves as a heading for the entire table.	// Immediately after table tag
+	border-spacing: 30px;	padding-top   padding-bottom   padding-left     padding-right
+	tr:nth-child(even)	
+	tr:hover
+
+HTML Lists:=> 
+	 to group a set of related items in lists.
+	<ul>			unordered list => ul  	ordered list => ol 
+  	 <li>Coffee</li>		list items  => li
+ 	 <li>Tea</li>
+ 	 <li>Milk</li>
+	</ul>
+	
+	Prop:-> 
+		list-style-type:disc( bullet)	circle	square	none	// For unordered_list
+		type="1"	"A"  "a"	"I"   "i"				// For ordered_list
+	
+Block and Inline Elements
+	Block 	starts on a new line		takes up the full width available	has a top and a bottom margin     p, div, address, footer, table	
+	Inline 	does not start on a new line	 takes up as much width as necessary.	It has not margin	span, img, 
+	
+<div>	used as a container for other HTML elements
+<span>	used to mark up a part of a text,
+
+Paths 
+	<img src="picture.jpg">		same folder as the current page
+	<img src="images/picture.jpg">	images folder in the current folder
+	<img src="/images/picture.jpg">	Images folder at the root of the current web
+	<img src="../picture.jpg">		one level up from the current folder
+
+
+HTML 
+	 <head> 		 for metadata (data about data)
+	 <title> 		 defines the title of the document
+	 <style> 		 define style information for a single document
+	 <link> 		 used to link to external style sheets
+	 <meta> 		 used to specify the character set, page description, keywords, author of the document, and viewport settings
+	 <script> 		 define client-side JavaScripts
+	 <base>		 element specifies the base URL and/or target for all relative URLs in a page
+
+
+ Layout Elements
+	<header> - 	Defines a header for a document or a section
+	<nav> -	 	Defines a set of navigation links
+	<section> 	Defines a section in a document
+	<article> - 	Defines an independent, self-contained content
+	<aside> - 	Defines content aside from the content (like a sidebar)
+	<footer> - 	Defines a footer for a document or a section
+	<details> - 	Defines additional details that the user can open and close on demand
+	<summary> - 	Defines a heading for the <details> element
+
+HTML Semantic Elements(elements with a meaning)
+	non-semantic elements: <div> and <span> - Tells nothing about its content.
+	semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+
+<section> 	defines a section in a document.
+<article> 		element specifies independent, self-contained content.
+<footer>		 element defines a footer for a document or section.
+
+
+
+HTML FORMS:=> 
+	 to collect user input.
+		<form>
+		.
+		form elements
+		.
+		</form>
+		
+	<input type="text">		Displays a single-line text input field
+	<input type="radio">	Displays a radio button (for selecting one of many choices)
+	<input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+	<input type="submit">	Displays a submit button (for submitting the form)
+	<input type="button">	Displays a clickable button
+
+	 <label for="fname">First name:</label><br>			// For labelling 
+ 	 <input type="text" id="fname" name="fname"><br>
+
+	Radio Buttons						// name should be same 	
+	<input type="radio" id="html" name="fav_language" >
+  	<label for="html">HTML</label><br>
+  	<input type="radio" id="css" name="fav_language" >
+  	<label for="css">CSS</label><br>
+
+Action Attribute
+	defines the action to be performed when the form is submitted.
+	<form action="/action_page.php">
+Target Attribute
+	where to display the response that is received after submitting the form.
+	<form action="/action_page.php" target="_blank">
+		_blank	The response is displayed in a new window or tab
+		_self	The response is displayed in the current window
+		_parent	The response is displayed in the parent frame
+		_top	The response is displayed in the full body of the window
+		framename	The response is displayed in a named iframe
+
+<select> element defines a drop-down list:
+	<select id="cars" name="cars">
+  		<option value="volvo" selected>Volvo</option>
+  		<option value="saab">Saab</option>
+	</select>
+
+size attribute to specify the number of visible values:
+	<select id="cars" name="cars" size="3">
+
+<textarea> element defines a multi-line input field (a text area):
+	<textarea name="message" rows="10" cols="30">
+		The cat was playing in the garden.
+	</textarea>
+
+<button> element defines a clickable button:
+	<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+The <fieldset> element is used to group related data in a form.
+The <legend> element defines a caption for the <fieldset> element.
+
+
+
+INPUT TYPES 
+	<input type="button">
+	<input type="checkbox">
+	<input type="color">
+	<input type="date">
+	<input type="datetime-local">
+	<input type="email">
+	<input type="hidden">
+	<input type="image">
+	<input type="file">
+	<input type="month">
+	<input type="number">
+	<input type="password">
+	<input type="radio">
+	<input type="range">
+	<input type="reset">
+	<input type="search">
+	<input type="submit">
+	<input type="tel">
+	<input type="text">
+	<input type="time">
+	<input type="url">
+	<input type="week">
+
+
+Input Restrictions
+	Attribute		Description
+	checked	Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio")
+	disabled	Specifies that an input field should be disabled
+	max	Specifies the maximum value for an input field
+	maxlength	Specifies the maximum number of character for an input field
+	min	Specifies the minimum value for an input field
+	pattern	Specifies a regular expression to check the input value against
+	readonly	Specifies that an input field is read only (cannot be changed)
+	required	Specifies that an input field is required (must be filled out)
+	size	Specifies the width (in characters) of an input field
+	step	Specifies the legal number intervals for an input field
+	value	Specifies the default value for an input field
+
+	placeholder	 short hint is displayed in the input field before the user enters a value.
+	autofocus		 specifies that an input field should automatically get focus when the page loads.
