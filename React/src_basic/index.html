@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Me! </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root">Not rendered</div>
+    
+    
+    
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <!-- the React library. This library is the interface of how to interact with React; all the methods (except one) 
+        will be via this library. It contains no way of rendering itself though; it's just the API. -->
+
+
+
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <!-- the rendering layer. Since we're rendering to the browser, we're using React DOM -->
+    
+    
+
+    <!-- Printing of Hello World! -->
+    <!-- <script>
+        // Capitalize the components name
+        const App = () => {
+            return React.createElement( // A function component must return markup and create one instance of some component. 
+                "div",  // Tags that are output of DOM.
+                {},    
+                // React.createElement("h1", {}, "Adopt Me!") or anything you wanna sent.
+                "Hello World"
+            )
+        }
+
+
+        const container = document.getElementById('root'); 
+        // Grab by existing div out of HTML document. 
+
+        const root = ReactDOM.createRoot(container);
+        // Signal to React where we want it to render our app. 
+
+        root.render(React.createElement(App)); 
+        // Here again createElement because it creates instance of class
+
+    </script> -->
+
+
+    <!-- Again with sort of codes.  -->
+    <!-- <script src="./App1.js"></script> -->
+
+
+    <!-- Printing with some props -->
+    <script src="./App2.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+
+<!--
+
+* make our own component, App. React is all about making components
+* There are two types of components, function components and class components
+* A function component must return markup (which is what React.createElement generates. 
+
+-->
