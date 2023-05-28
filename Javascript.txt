@@ -162,6 +162,10 @@ JavaScript Numbers
 
 	NaN - Not a Number		//  indicating that a number is not a legal number.
 	Infinity			// number outside the largest possible number.
+	
+	Number(true) = 1
+	!!undefined = false
+	Number(!!undefined) = 0
 
 	toString() 			// returns a number as a string.	|| x.toString();					
 	toExponential() 		// returns a string, with a number rounded and written using exponential notation.	|| x.toExponential(4);
