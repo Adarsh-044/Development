@@ -40,6 +40,7 @@ Staging Area
 ? git add  
     --a  or a . // Adding all the files
     fle_name    // Only Specific file   => Went into stacked area 
+? git reset     // Transfer from staging area to untraked area
 
 ? git commit -m "First commit"  [-m means message]
 ? git commit -a -m "Comment"    [-a means all files would directly committed without going into staging area]
@@ -51,6 +52,7 @@ Git bash commands / linux commands
     ls [list documents]
     rm -rf .git    [To delete git file]
     touch file_name     // Create new file
+    tree 
     
 ? git clone https_link new_folder name // To create a copy in local file.
 
