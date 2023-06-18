@@ -145,4 +145,15 @@ Branches
 
 When changing the branch the .gitignore file doesn't changes
 
+Stashing 
+    Temporarily saving changes that you have made to your working directory. 
+    git stash                     [To stash only staged files]
+    git stash --include-untracked [To include untracked files also]
+    git stash --all               [To include everything including ignored files]
+    git stash apply               [To apply latest stash]
+    git stash show                [To show all stashes]
+    git stash pop                 [Doesn't remove if there is merge conflicts]
+    git stash drop                [Remove everything from stash]
+    git stash clear               [Remove all stashes]
+
 */
