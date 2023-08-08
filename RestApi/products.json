@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Laptop",
+    "price": 1000,
+    "shop": "Electronics Inc.",
+    "discount": 0.1,
+    "feature": "High-performance processor",
+    "rating": 4.5,
+    "company": "XYZ Electronics"
+  },
+  {
+    "name": "Smartphone",
+    "price": 500,
+    "shop": "Tech Superstore",
+    "discount": 0.15,
+    "feature": "Dual cameras",
+    "rating": 4.2,
+    "company": "TechCo"
+  },
+  {
+    "name": "Headphones",
+    "price": 50,
+    "shop": "Audio World",
+    "discount": 0.2,
+    "feature": "Noise-cancellation",
+    "rating": 4.8,
+    "company": "AudioTech"
+  },
+  {
+    "name": "TV",
+    "price": 800,
+    "shop": "Appliance Outlet",
+    "discount": 0.05,
+    "feature": "Smart TV with voice control",
+    "rating": 4.3,
+    "company": "TechTV"
+  },
+  {
+    "name": "Gaming Console",
+    "price": 300,
+    "shop": "Game Haven",
+    "discount": 0.25,
+    "feature": "4K gaming support",
+    "rating": 4.7,
+    "company": "GamerTech"
+  },
+  {
+    "name": "Camera",
+    "price": 600,
+    "shop": "Photography Plus",
+    "discount": 0.12,
+    "feature": "Full-frame sensor",
+    "rating": 4.6,
+    "company": "PhotoTech"
+  },
+  {
+    "name": "Tablet",
+    "price": 350,
+    "shop": "Gadget Emporium",
+    "discount": 0.18,
+    "feature": "Large HD display",
+    "rating": 4.0,
+    "company": "GadgetTech"
+  },
+  {
+    "name": "Fitness Tracker",
+    "price": 80,
+    "shop": "Sports Outlet",
+    "discount": 0.3,
+    "feature": "Heart rate monitoring",
+    "rating": 4.4,
+    "company": "SportTech"
+  },
+  {
+    "name": "Printer",
+    "price": 120,
+    "shop": "Office Supplies",
+    "discount": 0.1,
+    "feature": "Wireless printing",
+    "rating": 4.1,
+    "company": "PrintTech"
+  },
+  {
+    "name": "Smart Watch",
+    "price": 200,
+    "shop": "Tech Empower",
+    "discount": 0.2,
+    "feature": "Health and fitness tracking",
+    "rating": 4.9,
+    "company": "HealthTech"
+  }
+]
