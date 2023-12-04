@@ -112,6 +112,8 @@ SSH key authentication
         tail < ~/.ssh/id_ed25519.pub  [Generate ssh key]
     Then the ssh key will be generated and add to the github account
 
+    ssh-keyscan github.com >> ~/.ssh/known_hosts // error if found 
+
     Method -2 
     ssh-keygen
     then cat [public key has been saved in ......{isme file ka location hona chahiye}]
