@@ -44,6 +44,11 @@
     To build the docker image 
         docker build -t hello-docker .
                     (tag) docker-name (Current directory)
+    
+    Download an image: 𝚍𝚘𝚌𝚔𝚎𝚛 𝚙𝚞𝚕𝚕 𝚞𝚋𝚞𝚗𝚝𝚞
+    Upload an image: 𝚍𝚘𝚌𝚔𝚎𝚛 𝚙𝚞𝚜𝚑 𝚖𝚢𝚞𝚜𝚎𝚛/𝚖𝚢𝚊𝚙𝚙
+    Delete an image: 𝚍𝚘𝚌𝚔𝚎𝚛 𝚛𝚖𝚒 𝚒𝚖𝚊𝚐𝚎_𝚗𝚊𝚖𝚎
+    View image history: 𝚍𝚘𝚌𝚔𝚎𝚛 𝚑𝚒𝚜𝚝𝚘𝚛𝚢 𝚒𝚖𝚊𝚐𝚎_𝚗𝚊𝚖𝚎
 
     To check for the image  
         -docker image ls 
