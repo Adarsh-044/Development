@@ -1,4 +1,7 @@
 JavaScript 
+
+	https://alok722.github.io/namaste-javascript-notes/dist/lectures.html
+	
 	programming language of the Web.
 	<script>
 	Scripts can be placed in the <body>, or in the <head> section
