@@ -1,0 +1,86 @@
+Kafka 
+	Open source distributed event streaming platform. 
+
+Pub/ Sub Model ⇒ Publisher/Subscriber Model 
+
+Components 
+Producer 
+Consumer 
+Broker (Msg Exchange) 
+Cluster (Group of Clusters) 
+Topic (Category of Message) 
+Partitions (Breaks into multiple logs)
+Offsets (A seq no. in each partitions)
+Consumer Group 
+Zookeeper (To track status of kafka cluster nodes) 
+
+Producer-Consumer Flow 
+Start the zookeeper 	
+kafka_2.12-3.8.0/bin 
+   ​​sh zookeeper-server-start.sh ../config/zookeeper.properties
+Start kafka-server
+		kafka_2.12-3.8.0/bin 
+   sh kafka-server-start.sh ../config/server.properties
+Create a topic 
+		kafka_2.12-3.8.0/bin
+		    sh kafka-topics.sh --bootstrap-server localhost:9092 --create --topic topicName --partitions 10 --replication-factor 1  
+--if-not-exists 
+--config retention.ms=259200000 
+--config segment.ms=3600000 
+--config min.insync.replicas=1 
+--config retention.bytes=48000000000 
+--config max.message.bytes=1000012 
+--config unclean.leader.election.enable=true 
+Start the producer 
+kafka_2.12-3.8.0
+  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topicName  
+Start the consumer 
+kafka_2.12-3.8.0
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topicName
+
+
+	
+
+Kafka-server port : 9092 
+List of Topics created : sh kafka-topics.sh --bootstrap-server localhost:9092  --list
+Description of topic : sh kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic topicName
+ Use Offset Explorer to check status, make zookeeper connection. 
+
+
+
+
+—------------------—------------------—------------------—------------------—------------------—------------------
+
+USING DOCKER 
+
+Create service-docker.yaml 
+version: '3'
+
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+
+
+
+To run the service : 
+ docker compose -f service-docker.yaml up -d 
+To verify the images 
+docker images 
+docker ps 
+docker exec -it kafka bin/sh ; kafka is container name 
+Now execute the functions like creating kafka server, topic … 
+
+
+Github Link 
+https://github.com/Java-Techie-jt/kafka-producer-example
