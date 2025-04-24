@@ -4,9 +4,9 @@ Kafka
 Pub/ Sub Model ⇒ Publisher/Subscriber Model 
 
 Components 
-Producer 
-Consumer 
-Broker (Msg Exchange) 
+Producer (sends events to Kafka topics)
+Consumer (reads events from Kafka topics)
+Broker (Msg Exchange) [Server or Node] [Stores messages]  
 Cluster (Group of Clusters) 
 Topic (Category of Message) 
 Partitions (Breaks into multiple logs)
